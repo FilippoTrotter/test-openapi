@@ -1,0 +1,799 @@
+{
+  "info": {
+    "title": "test",
+    "version": "1.0.0"
+  },
+  "openapi": "3.0.0",
+  "paths": {
+    "/test/env": {
+      "get": {
+        "description": "Rule unknown ignore\nGiven I have a 'string' named 'content'\nThen print data\n",
+        "parameters": [
+          {
+            "description": "Pass a string as content",
+            "in": "query",
+            "name": "content",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "output": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "output"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "The slangroom execution output, splitted by newline"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "message": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "message"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Slangroom execution error"
+          }
+        },
+        "tags": [
+          "📑 Zencodes"
+        ]
+      },
+      "post": {
+        "description": "Rule unknown ignore\nGiven I have a 'string' named 'content'\nThen print data\n",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "content": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "content"
+                ],
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "output": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "output"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "The slangroom execution output, splitted by newline"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "message": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "message"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Slangroom execution error"
+          }
+        },
+        "tags": [
+          "📑 Zencodes"
+        ]
+      }
+    },
+    "/test/execute_zencode": {
+      "get": {
+        "description": "Rule unknown ignore\n\nGiven I send keys 'keys' and send data 'data' and send script 'zencode' and execute zencode and output into 'result'\n\nGiven I have a 'string dictionary' named 'result'\nThen print the 'result'\n",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "output": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "output"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "The slangroom execution output, splitted by newline"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "message": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "message"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Slangroom execution error"
+          }
+        },
+        "tags": [
+          "📑 Zencodes"
+        ]
+      },
+      "post": {
+        "description": "Rule unknown ignore\n\nGiven I send keys 'keys' and send data 'data' and send script 'zencode' and execute zencode and output into 'result'\n\nGiven I have a 'string dictionary' named 'result'\nThen print the 'result'\n",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {}
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "output": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "output"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "The slangroom execution output, splitted by newline"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "message": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "message"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Slangroom execution error"
+          }
+        },
+        "tags": [
+          "📑 Zencodes"
+        ]
+      }
+    },
+    "/test/hello": {
+      "get": {
+        "description": "Given nothing\nThen print the string 'Hello from embedded!'\n",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "output": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "output"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "The slangroom execution output, splitted by newline"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "message": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "message"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Slangroom execution error"
+          }
+        },
+        "tags": [
+          "📑 Zencodes"
+        ]
+      },
+      "post": {
+        "description": "Given nothing\nThen print the string 'Hello from embedded!'\n",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {}
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "output": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "output"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "The slangroom execution output, splitted by newline"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "message": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "message"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Slangroom execution error"
+          }
+        },
+        "tags": [
+          "📑 Zencodes"
+        ]
+      }
+    },
+    "/test/param": {
+      "get": {
+        "description": "\nRule unknown ignore\nGiven I have a 'string' named 'name'\nGiven I have a 'number' named 'timeout'\nGiven I have a 'string' named 'drink'\nGiven I have a 'string' named 'username'\n\nThen print the data\n",
+        "parameters": [
+          {
+            "description": "drink size",
+            "in": "query",
+            "name": "drink",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "name",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "password for user if required",
+            "in": "query",
+            "name": "password",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "port number",
+            "in": "query",
+            "name": "port",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "secret",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "timeout in seconds",
+            "in": "query",
+            "name": "timeout",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "user to login",
+            "in": "query",
+            "name": "username",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "output": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "output"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "The slangroom execution output, splitted by newline"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "message": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "message"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Slangroom execution error"
+          }
+        },
+        "tags": [
+          "📑 Zencodes"
+        ]
+      },
+      "post": {
+        "description": "\nRule unknown ignore\nGiven I have a 'string' named 'name'\nGiven I have a 'number' named 'timeout'\nGiven I have a 'string' named 'drink'\nGiven I have a 'string' named 'username'\n\nThen print the data\n",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "drink": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  },
+                  "port": {
+                    "type": "string"
+                  },
+                  "secret": {
+                    "type": "string"
+                  },
+                  "timeout": {
+                    "type": "string"
+                  },
+                  "username": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "username",
+                  "password",
+                  "name",
+                  "secret",
+                  "timeout",
+                  "port",
+                  "drink"
+                ],
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "output": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "output"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "The slangroom execution output, splitted by newline"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "message": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "message"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Slangroom execution error"
+          }
+        },
+        "tags": [
+          "📑 Zencodes"
+        ]
+      }
+    },
+    "/test/stdin": {
+      "get": {
+        "description": "Rule unknown ignore\nGiven I have a 'string' named 'file'\nthen print the data\n",
+        "parameters": [
+          {
+            "description": "file to read",
+            "in": "query",
+            "name": "file",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "output": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "output"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "The slangroom execution output, splitted by newline"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "message": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "message"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Slangroom execution error"
+          }
+        },
+        "tags": [
+          "📑 Zencodes"
+        ]
+      },
+      "post": {
+        "description": "Rule unknown ignore\nGiven I have a 'string' named 'file'\nthen print the data\n",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "file": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "file"
+                ],
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "output": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "output"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "The slangroom execution output, splitted by newline"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "message": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "message"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Slangroom execution error"
+          }
+        },
+        "tags": [
+          "📑 Zencodes"
+        ]
+      }
+    },
+    "/test/test": {
+      "get": {
+        "description": "Rule unknown ignore\nGiven I fetch the local timestamp in seconds and output into 'timestamp'\nGiven I have a 'number' named 'timestamp'\nThen print the 'timestamp'\n",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "output": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "output"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "The slangroom execution output, splitted by newline"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "message": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "message"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Slangroom execution error"
+          }
+        },
+        "tags": [
+          "📑 Zencodes"
+        ]
+      },
+      "post": {
+        "description": "Rule unknown ignore\nGiven I fetch the local timestamp in seconds and output into 'timestamp'\nGiven I have a 'number' named 'timestamp'\nThen print the 'timestamp'\n",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {}
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "output": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "output"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "The slangroom execution output, splitted by newline"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "message": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "message"
+                  ],
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Slangroom execution error"
+          }
+        },
+        "tags": [
+          "📑 Zencodes"
+        ]
+      }
+    }
+  },
+  "tags": [
+    {
+      "description": "Endpoints generated over the zencode smart contracts",
+      "name": "📑 Zencodes"
+    }
+  ]
+}
