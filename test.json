@@ -137,6 +137,16 @@
         "/test/execute_zencode": {
             "get": {
                 "description": "<pre>Rule unknown ignore\n\nGiven I send keys 'keys' and send data 'data' and send script 'zencode' and execute zencode and output into 'result'\n\nGiven I have a 'string dictionary' named 'result'\nThen print the 'result'\n</pre>",
+                "parameters": [
+                    {
+                        "description": "The result",
+                        "in": "query",
+                        "name": "result",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
                 "responses": {
                     "200": {
                         "content": {
@@ -190,7 +200,17 @@
                 "requestBody": {
                     "content": {
                         "application/json": {
-                            "schema": {}
+                            "schema": {
+                                "properties": {
+                                    "result": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "result"
+                                ],
+                                "type": "object"
+                            }
                         }
                     }
                 },
@@ -354,10 +374,10 @@
         },
         "/test/param": {
             "get": {
-                "description": "<pre>\nRule unknown ignore\nGiven I have a 'string' named 'name'\nGiven I have a 'number' named 'timeout'\nGiven I have a 'string' named 'drink'\nGiven I have a 'string' named 'username'\n\nThen print the data\n</pre>",
+                "description": "<pre>\nRule unknown ignore\nGiven I have a 'string' named 'name'\nGiven I have a 'number' named 'timeout'\nGiven I have a 'string' named 'drink'\nGiven I have a 'string' named 'username'\nThen print the data\n</pre>",
                 "parameters": [
                     {
-                        "description": "drink size",
+                        "description": "The drink",
                         "in": "query",
                         "name": "drink",
                         "schema": {
@@ -365,6 +385,7 @@
                         }
                     },
                     {
+                        "description": "The name",
                         "in": "query",
                         "name": "name",
                         "schema": {
@@ -372,38 +393,15 @@
                         }
                     },
                     {
-                        "description": "password for user if required",
-                        "in": "query",
-                        "name": "password",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "description": "port number",
-                        "in": "query",
-                        "name": "port",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "in": "query",
-                        "name": "secret",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    {
-                        "description": "timeout in seconds",
+                        "description": "The timeout",
                         "in": "query",
                         "name": "timeout",
                         "schema": {
-                            "type": "string"
+                            "type": "number"
                         }
                     },
                     {
-                        "description": "user to login",
+                        "description": "The username",
                         "in": "query",
                         "name": "username",
                         "schema": {
@@ -460,7 +458,7 @@
                 ]
             },
             "post": {
-                "description": "<pre>\nRule unknown ignore\nGiven I have a 'string' named 'name'\nGiven I have a 'number' named 'timeout'\nGiven I have a 'string' named 'drink'\nGiven I have a 'string' named 'username'\n\nThen print the data\n</pre>",
+                "description": "<pre>\nRule unknown ignore\nGiven I have a 'string' named 'name'\nGiven I have a 'number' named 'timeout'\nGiven I have a 'string' named 'drink'\nGiven I have a 'string' named 'username'\nThen print the data\n</pre>",
                 "requestBody": {
                     "content": {
                         "application/json": {
@@ -472,30 +470,18 @@
                                     "name": {
                                         "type": "string"
                                     },
-                                    "password": {
-                                        "type": "string"
-                                    },
-                                    "port": {
-                                        "type": "string"
-                                    },
-                                    "secret": {
-                                        "type": "string"
-                                    },
                                     "timeout": {
-                                        "type": "string"
+                                        "type": "number"
                                     },
                                     "username": {
                                         "type": "string"
                                     }
                                 },
                                 "required": [
-                                    "username",
-                                    "password",
+                                    "drink",
                                     "name",
-                                    "secret",
                                     "timeout",
-                                    "port",
-                                    "drink"
+                                    "username"
                                 ],
                                 "type": "object"
                             }
@@ -620,6 +606,7 @@
                             "schema": {
                                 "properties": {
                                     "file": {
+                                        "format": "binary",
                                         "type": "string"
                                     }
                                 },
@@ -683,6 +670,16 @@
         "/test/test": {
             "get": {
                 "description": "<pre>Rule unknown ignore\nGiven I fetch the local timestamp in seconds and output into 'timestamp'\nGiven I have a 'number' named 'timestamp'\nThen print the 'timestamp'\n</pre>",
+                "parameters": [
+                    {
+                        "description": "The timestamp",
+                        "in": "query",
+                        "name": "timestamp",
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
                 "responses": {
                     "200": {
                         "content": {
@@ -736,7 +733,17 @@
                 "requestBody": {
                     "content": {
                         "application/json": {
-                            "schema": {}
+                            "schema": {
+                                "properties": {
+                                    "timestamp": {
+                                        "type": "number"
+                                    }
+                                },
+                                "required": [
+                                    "timestamp"
+                                ],
+                                "type": "object"
+                            }
                         }
                     }
                 },
