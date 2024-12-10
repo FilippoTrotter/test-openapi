@@ -22,8 +22,11 @@
                       "in": "query",
                       "name": "drink",
                       "schema": {
-                          "type": "string",
-                          "enum": ["small", "big"]
+                        "enum": [
+                          "newest",
+                          "oldest"
+                        ],
+                        "type": "string"
                       }
                   },
                   {
