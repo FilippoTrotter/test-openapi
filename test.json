@@ -1,13 +1,13 @@
 {
+  "openapi": "3.0.0",
   "info": {
       "title": "gemini",
       "version": "1.0.0"
   },
-  "openapi": "3.0.0",
   "paths": {
       "/test/param": {
           "get": {
-              "description": "\n\nRule unknown ignore\n\nGiven I have a 'string' named 'name'\n\nGiven I have a 'number' named 'timeout'\n\nGiven I have a 'string' named 'drink'\n\nGiven I have a 'string' named 'username'\n\n\n\nThen print the data\n\n",
+              "description": "Rule unknown ignore\nGiven I have a 'string' named 'name'\nGiven I have a 'number' named 'timeout'\nGiven I have a 'string' named 'drink'\nGiven I have a 'string' named 'username'\nThen print the data",
               "parameters": [
                   {
                       "description": "Configuration details",
@@ -25,7 +25,6 @@
                           "type": "string",
                           "enum": ["small", "big"]
                       }
-                      
                   },
                   {
                       "in": "query",
@@ -87,14 +86,12 @@
                                           "type": "array"
                                       }
                                   },
-                                  "required": [
-                                      "output"
-                                  ],
+                                  "required": ["output"],
                                   "type": "object"
                               }
                           }
                       },
-                      "description": "The slangroom execution output, splitted by newline"
+                      "description": "The slangroom execution output, split by newline"
                   },
                   "500": {
                       "content": {
@@ -108,9 +105,7 @@
                                           "type": "array"
                                       }
                                   },
-                                  "required": [
-                                      "message"
-                                  ],
+                                  "required": ["message"],
                                   "type": "object"
                               }
                           }
@@ -123,7 +118,7 @@
               ]
           },
           "post": {
-              "description": "\n\nRule unknown ignore\n\nGiven I have a 'string' named 'name'\n\nGiven I have a 'number' named 'timeout'\n\nGiven I have a 'string' named 'drink'\n\nGiven I have a 'string' named 'username'\n\n\n\nThen print the data\n\n",
+              "description": "Rule unknown ignore\nGiven I have a 'string' named 'name'\nGiven I have a 'number' named 'timeout'\nGiven I have a 'string' named 'drink'\nGiven I have a 'string' named 'username'\nThen print the data",
               "requestBody": {
                   "content": {
                       "application/json": {
@@ -138,10 +133,7 @@
                                               "type": "boolean"
                                           }
                                       },
-                                      "required": [
-                                          "key",
-                                          "value"
-                                      ],
+                                      "required": ["key", "value"],
                                       "type": "object"
                                   },
                                   "drink": {
@@ -167,14 +159,7 @@
                                   }
                               },
                               "required": [
-                                  "username",
-                                  "password",
-                                  "name",
-                                  "secret",
-                                  "timeout",
-                                  "port",
-                                  "drink",
-                                  "config"
+                                  "username", "password", "name", "secret", "timeout", "port", "drink", "config"
                               ],
                               "type": "object"
                           }
@@ -194,9 +179,7 @@
                                           "type": "array"
                                       }
                                   },
-                                  "required": [
-                                      "output"
-                                  ],
+                                  "required": ["output"],
                                   "type": "object"
                               }
                           }
@@ -215,9 +198,7 @@
                                           "type": "array"
                                       }
                                   },
-                                  "required": [
-                                      "message"
-                                  ],
+                                  "required": ["message"],
                                   "type": "object"
                               }
                           }
