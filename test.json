@@ -22,9 +22,10 @@
                       "in": "query",
                       "name": "drink",
                       "schema": {
-                          "type": "string"
-                      },
-                      "enum": ["small", "big"]
+                          "type": "string",
+                          "enum": ["small", "big"]
+                      }
+                      
                   },
                   {
                       "in": "query",
